@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -10,22 +10,34 @@
 
 <body>
    <input id="input"></input>
-   <button type="submit" onclick="print()">submit</button>
+   <button type="submit" id="btn">submit</button>
+   <div id="para">
    
+   </div>
    <script>
-    function print(){
+		let name=document.getElementById("input");
+		let button=document.getElementById("btn");
+		let p=document.getElementById("para");
+		
+		button.addEventListener("click",function(){
+		
+			if(name.value!==""){
+			let a =document.createElement("li")
+			 a.innerText=input.value;
+				para.appendChild(a);
+			}
+		})
+		
+	/*	
+   function print(){
 	   var input = document.getElementById("input");
 	   console.log(input.value);
 	   
 	   var output = document.createElement("p");
 	   output.innerText = input.value;
-	   document.getElementByYagName("BODY")[0].appendChild(output);
+	   document.getElementByTagName("BODY")[0].appendChild(output);
 	   input.value = "";
-	}
-   
-   </script>
-   
-   
-   
+	}*/
+	</script>
 </body>
 </html>
